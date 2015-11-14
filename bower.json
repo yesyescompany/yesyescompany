@@ -1,0 +1,6 @@
+{
+  "name": "yesyescompany",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}

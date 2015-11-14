@@ -1,0 +1,72 @@
+@import "foundation/components/grid";
+
+@mixin group-member() {
+  @media only screen and (max-width: 40em) {
+    @include grid-column(12)
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 40.063em) { @include grid-column(6); }
+}
+
+.IndexPage {
+  .header {
+    padding: 6.25rem 0;
+    background: url("https://s3-ap-southeast-2.amazonaws.com/static.cdn.austcollege.edu.au/enrol/images/background_landing_page.png");
+    h1 {
+      color: #fff;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+  }
+  .container {
+    padding: 40px 0;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  /* Asset */
+  .asset-group {
+    @include grid-row();
+  }
+  .asset {
+    @include group-member;
+    text-rendering: optimizeLegibility;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  /* Member */
+  .member-group {
+    @include grid-row();
+    text-align: center;
+  }
+  .member {
+    @include group-member;
+
+    img {
+      border: 10px solid #f3f3f3;
+    }
+    .role {
+      margin-top: 0.625rem;
+      font-size: 1.875rem;
+      font-weight: 300;
+    }
+    .desc {
+      margin-top: 0.3125rem;
+      font-size: 1rem;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+
+  /* Pricing */
+  .pricing-group {
+    @include grid-row();
+  }
+  .pricing {
+    @include group-member;
+  }
+}
